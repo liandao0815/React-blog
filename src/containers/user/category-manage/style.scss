@@ -1,0 +1,58 @@
+@import '../../../assets/styles/mixin';
+
+.container {
+  max-height: 480px;
+  overflow: auto;
+  box-sizing: border-box;
+  @include scrollbar-style;
+  .category-list {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    > li {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      .category-name {
+        line-height: 32px;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      .category-manage {
+        text-align: right;
+        button:nth-child(1) {
+          @include button(rgb(214, 193, 71));
+          margin-right: 10px;
+        }
+        button:nth-child(2) {
+          @include button(rgb(201, 62, 62));
+        }
+      }
+    }
+    .no-category {
+      margin: 80px auto 30px;
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+}
+
+.option-category {
+  width: 50%;
+  margin: 0 auto 30px;
+  text-align: center;
+  input {
+    @include input;
+    margin-right: 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+  }
+  button {
+    @include button;
+    height: 36px;
+  }
+}

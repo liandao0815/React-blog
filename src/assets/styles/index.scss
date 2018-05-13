@@ -1,0 +1,21 @@
+@import './normalize';
+@import './icon';
+@import './mixin';
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  @include frosted-glass-background('../images/background.jpg');
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  color: rgb(160, 192, 231);
+}
+

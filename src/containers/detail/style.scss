@@ -1,0 +1,95 @@
+@import '../../assets/styles/mixin';
+
+.container {
+  @include frosted-glass-style;
+  margin: 60px auto;
+  &::before {
+    @include frosted-glass-background('../../assets/images/background.jpg');
+  }
+  .title {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 30px 0 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #fff;
+  }
+  .userInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .collect-icon {
+      margin-right: 10px;
+      font-size: 28px;
+      cursor: pointer;
+    }
+  }
+  .article {
+    margin-bottom: 40px;
+    line-height: 2em;
+    text-align: justify;
+    @include clearfix;
+    p {
+      margin: 0;
+    }
+    .read-count {
+      float: left;
+      margin-top: 20px;
+      > span {
+        font-weight: bold;
+      }
+    }
+    .update-time {
+      float: right;
+      margin-top: 20px;
+    }
+  }
+  .comment {
+    .comment-textarea {
+      position: relative;
+      margin-bottom: 40px;
+      .comment-textarea-title {
+        @extend %comment-title;
+      }
+      textarea {
+        @include textarea;
+      }
+      .commit-comment {
+        position: absolute;
+        right: 0;
+        bottom: -40px;
+        @include button;
+      }
+    }
+    .comment-list-container {
+      width: 100%;
+      box-sizing: border-box;
+      .comment-list-title {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        @extend %comment-title;
+      }
+      .comment-list {
+        margin: 10px 0 -10px;
+        padding: 0;
+        > li {
+          margin-bottom: 30px;
+          .comment-content {
+            line-height: 1.5em;
+            text-align: justify;
+          }
+        }
+      }
+      .no-comment {
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+%comment-title {
+  line-height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+}

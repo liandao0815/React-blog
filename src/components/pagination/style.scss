@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  width: 60%;
+  justify-content: center;
+  > li {
+    width: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    user-select: none;
+    > span {
+      cursor: pointer;
+    }
+  }
+  .active-page {
+    color: rgb(66, 38, 190);
+  }
+  .not-allow {
+    color: rgba($color: #ddd, $alpha: 0.7);
+    cursor: not-allowed;
+  }
+}

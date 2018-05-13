@@ -1,0 +1,35 @@
+@import '../../../assets/styles/mixin';
+
+.article-list {
+  width: 100%;
+  margin: 0;
+  padding: 0 10px;
+  max-height: 480px;
+  overflow: auto;
+  box-sizing: border-box;
+  @include scrollbar-style;
+  > li {
+    margin-bottom: 24px;
+    .article-title {
+      margin: 0 auto 10px;
+      @include text-ellipsis(1);
+    }
+    .article-brief {
+      @include text-ellipsis(3);
+      text-align: justify;
+      line-height: 1.5em;
+    }
+    .article-manage {
+      margin-top: 10px;
+      width: 100%;
+      text-align: right;
+      button:nth-child(1) {
+        @include button(rgb(214, 193, 71));
+        margin-right: 20px;
+      }
+      button:nth-child(2) {
+        @include button(rgb(201, 62, 62));
+      }
+    }
+  }
+}

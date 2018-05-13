@@ -1,0 +1,21 @@
+.back-top {
+  position: fixed;
+  right: 50px;
+  bottom: 80px;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  span {
+    display: block;
+    width: 42px;
+    line-height: 42px;
+    text-align: center;
+    overflow: hidden;
+    color: rgb(238, 229, 229);
+    border-radius: 50%;
+    font-size: 36px;
+    background: linear-gradient(45deg, rgb(20, 25, 92), rgb(115, 170, 115));
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+  }
+}

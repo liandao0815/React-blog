@@ -1,0 +1,57 @@
+@import '../../assets/styles/mixin';
+
+.user-center {
+  @include frosted-glass-style;
+  margin: 60px auto;
+  &::before {
+    @include frosted-glass-background('../../assets/images/background.jpg');
+  }
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    > li {
+      a {
+        display: block;
+        padding-bottom: 10px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        width: 200px;
+        color: #fff;
+        user-select: none;
+      }
+    }
+  }
+}
+
+.page-main {
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.alert-button {
+  @include alert-button;
+}
+
+:global {
+  a.active {
+    border-bottom: 2px solid #fff;
+  }
+
+  .fade-enter {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  .fade-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+}

@@ -1,0 +1,34 @@
+.header {
+  width: 60%;
+  height: 46px;
+  margin: 30px auto 0;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  .article-list-title {
+    letter-spacing: 3px;
+    font-size: 22px;
+    margin-left: 4px;
+  }
+  .search-content {
+    .search-item {
+      line-height: 42px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+    .input {
+      color: #fff;
+      width: 160px;
+      line-height: 24px;
+      outline: none;
+      border: none;
+      font-size: 18px;
+      border-bottom: 1px solid #fff;
+      background: transparent;
+      transition: all 0.5s ease-out;
+      &:focus {
+        width: 300px;
+      }
+    }
+  }
+}

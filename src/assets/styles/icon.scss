@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'blog';
+  src: url('../fonts/blog.ttf?n343wo') format('truetype'),
+    url('../fonts/blog.woff?n343wo') format('woff'),
+    url('../fonts/blog.svg?n343wo#blog') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'blog' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:global {
+  .icon-appreciate:before {
+    content: '\e900';
+  }
+  .icon-appreciate_fill:before {
+    content: '\e901';
+  }
+  .icon-calendar:before {
+    content: '\e902';
+  }
+  .icon-check:before {
+    content: '\e903';
+  }
+  .icon-close:before {
+    content: '\e904';
+  }
+  .icon-left:before {
+    content: '\e905';
+  }
+  .icon-like:before {
+    content: '\e906';
+  }
+  .icon-like_fill:before {
+    content: '\e907';
+  }
+  .icon-loading:before {
+    content: '\e908';
+  }
+  .icon-right:before {
+    content: '\e909';
+  }
+  .icon-search:before {
+    content: '\e90a';
+  }
+  .icon-sort:before {
+    content: '\e90b';
+  }
+  .icon-tag_fill:before {
+    content: '\e90c';
+  }
+  .icon-top:before {
+    content: '\e90d';
+  }
+  .icon-user:before {
+    content: '\e90e';
+  }
+  .icon-write_fill:before {
+    content: '\e90f';
+  }
+}

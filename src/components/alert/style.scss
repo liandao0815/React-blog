@@ -1,0 +1,34 @@
+.mask {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 15;
+  .alert {
+    position: fixed;
+    width: 400px;
+    height: 150px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 100px auto;
+    padding-top: 30px;
+    z-index: 20;
+    word-wrap: break-word;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
+    .close {
+      position: absolute;
+      top: 0px;
+      right: 20px;
+      font-size: 26px;
+      cursor: pointer;
+    }
+  }
+}

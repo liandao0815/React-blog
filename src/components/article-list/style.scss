@@ -1,0 +1,68 @@
+@import '../../assets/styles/mixin';
+
+.list {
+  margin: 0;
+  padding: 20px 0 0;
+  margin-bottom: 30px;
+  list-style: none;
+  color: #dedede;
+  box-sizing: border-box;
+  .content {
+    margin: 0 auto 30px;
+    @include frosted-glass-style;
+    &::before {
+      @include frosted-glass-background('../../assets/images/background.jpg');
+    }
+    .info {
+      position: relative;
+      .avatar {
+        @include avatar;
+      }
+      .user-info {
+        margin-left: 12px;
+      }
+      .icon-group {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        .collect-icon {
+          margin-right: 20px;
+          cursor: pointer;
+          display: inline-block;
+          background-size: cover;
+        }
+        .date-icon {
+          cursor: pointer;
+          display: inline-block;
+          background-size: cover;
+        }
+      }
+    }
+    .brief {
+      margin: 20px;
+      font-size: 16px;
+      line-height: 2em;
+      text-align: justify;
+      @include text-ellipsis(6);
+      .article-title {
+        width: 70%;
+        margin: 0 auto 20px;
+        line-height: 24px;
+        font-size: 22px;
+        text-align: center;
+        @include text-ellipsis(1);
+      }
+    }
+    .footer {
+      padding-right: 20px;
+      text-align: right;
+      span {
+        line-height: 1.1em;
+        font-size: 1.1em;
+        cursor: pointer;
+        color: #dedede;
+      }
+    }
+  }
+}

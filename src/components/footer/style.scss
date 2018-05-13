@@ -1,0 +1,32 @@
+@import '../../assets/styles/mixin';
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  line-height: 40px;
+  color: rgba($color: #fff, $alpha: 1);
+  z-index: 5;
+  &::before {
+    @include frosted-glass-background('../../assets/images/background.jpg');
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+svg {
+  margin-left: 10px;
+  vertical-align: middle;
+  fill: currentColor;
+  cursor: pointer;
+}

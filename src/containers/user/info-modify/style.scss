@@ -1,0 +1,45 @@
+@import '../../../assets/styles/mixin';
+
+.container {
+  max-height: 480px;
+  .introduction {
+    position: relative;
+    margin: 50px auto;
+    width: 70%;
+    .textarea {
+      @include textarea;
+    }
+    .modify-introdution-btn {
+      @include button;
+      position: absolute;
+      right: 0;
+      bottom: -40px;
+    }
+  }
+  .upload-avatar {
+    width: 300px;
+    margin: 100px auto 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .file-div {
+      position: relative;
+      width: 120px;
+      line-height: 3em;
+      border: 2px dotted #fff;
+      text-align: center;
+      .file {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        cursor: pointer;
+      }
+    }
+    .upload-avatar-btn {
+      @include button(rgb(103, 117, 43));
+    }
+  }
+}
