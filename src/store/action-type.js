@@ -14,6 +14,8 @@ export const COLLECT = 'COLLECT'
 // category action-types
 export const LOAD_CATEGORY = 'LOAD_CATEGORY'
 
+export const CLEAR_CATEGORY = 'CLEAR_CATEGORY'
+
 // page action-types
 export const INITIAL_PAGE = 'INITIAL_PAGE'
 

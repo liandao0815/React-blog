@@ -60,8 +60,9 @@ export const login = (username, password) => {
     http.login(username, password).then(res => {
       if (res.data.code === 0) {
         window.localStorage.setItem('token', res.data.data.token)
-
         dispatch(successAuthorize(res.data.data))
+        dispatch(getUserInfo())
+        dispatch(getAllCategory())
       } else {
         dispatch(operateMessage(res.data.msg))
       }
@@ -139,6 +140,10 @@ export const getAllCategory = () => {
       }
     })
   }
+}
+
+export const clearCategory = () => {
+  return { type: types.CLEAR_CATEGORY }
 }
 
 // page action

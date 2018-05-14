@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { cancelAuthorize } from 'store/action'
+import { cancelAuthorize, clearCategory, initialPage } from 'store/action'
 import { CSSTransition } from 'react-transition-group'
 import classNames from 'classnames'
 import Collapse, { Panel } from 'rc-collapse'
@@ -16,7 +16,7 @@ import style from './style.scss'
     user: state.user,
     category: state.category
   }),
-  { cancelAuthorize }
+  { cancelAuthorize, clearCategory, initialPage }
 )
 class Sidebar extends PureComponent {
   static proptypes = {
@@ -84,9 +84,13 @@ class Sidebar extends PureComponent {
   }
 
   logout = () => {
+    const { cancelAuthorize, clearCategory, initialPage, history } = this.props
+
     window.localStorage.removeItem('token')
-    this.props.cancelAuthorize()
-    this.props.history.push('/')
+    cancelAuthorize()
+    clearCategory()
+    initialPage({})
+    history.push('/')
   }
 
   render() {
