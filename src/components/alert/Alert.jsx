@@ -7,7 +7,7 @@ class Alert extends PureComponent {
     children: PropTypes.node.isRequired,
     show: PropTypes.bool.isRequired,
     toggle: PropTypes.func,
-    type: PropTypes.string
+    type: PropTypes.oneOf(['success', 'info', 'warn', 'error'])
   }
 
   static defaultProps = {
