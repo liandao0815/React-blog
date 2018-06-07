@@ -1,6 +1,7 @@
-export default (func, wait = 0, options = { leading: true, trailing: true }) => {
+export default (func, wait = 0, option) => {
   let timeout, result, _this, _arguments
   let previous = 0
+  const options = { leading: true, trailing: true, ...option }
 
   const later = function() {
     previous = options.leading === false ? 0 : new Date().getTime()
