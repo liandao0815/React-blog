@@ -62,7 +62,7 @@
   }
   ```
 
-- 路由权限管理
+- **路由权限管理**
 
   ```javascript
   @connect(state => ({ user: state.user }))
@@ -122,8 +122,7 @@
   
   export default _axios
   ```
-
-- 
+  
 
 ### 项目运行
 
