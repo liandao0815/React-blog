@@ -26,7 +26,8 @@
 - [x] **前端路由：** React-Router
 - [x] **状态管理：** Redux
 - [x] **动画工具：** React-Transition-Group
-- [x] **构建工具：** webpack
+- [x] **构建工具：** Webpack
+- [x] **CSS模块化方案：** CSS Modules
 - [x] **CSS预处理器：** Sass/Scss
 - [x] **数据请求：** Axios...
 
